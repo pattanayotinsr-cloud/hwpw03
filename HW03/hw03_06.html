@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>1.6 CSS Scan Examples</title>
+
+<style>
+
+/* ================= BUTTON ================= */
+
+/* Button 6 ตามตัวอย่างที่เลือกจาก CSS Scan */
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 5px;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+/* Button แบบที่ 2 */
+.button-2 {
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #21618c;
+  transition: 0.2s;
+}
+
+.button-2:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Button แบบที่ 3 */
+.button-3 {
+  background: white;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-3:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+
+/* ================= BOX SHADOW ================= */
+
+.box {
+  width: 150px;
+  height: 100px;
+  background: white;
+  margin: 15px;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+/* Box Shadow แบบที่ 1 */
+.shadow-1 {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Box Shadow แบบที่ 2 */
+.shadow-2 {
+  box-shadow: 5px 5px 0 #3498db;
+}
+
+/* Box Shadow แบบที่ 3 */
+.shadow-3 {
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.1),
+    0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+/* ================= CHECKBOX ================= */
+
+/* ซ่อน Checkbox เดิม */
+.custom-checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* เมื่อเลือก Checkbox */
+.custom-checkbox:checked {
+  background: #3498db;
+  border-color: #3498db;
+}
+
+/* สร้างเครื่องหมายถูก */
+.custom-checkbox:checked::after {
+  content: "✓";
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Checkbox แบบที่ 2 */
+.check-2 {
+  border-radius: 50%;
+  border-color: #e74c3c;
+}
+
+.check-2:checked {
+  background: #e74c3c;
+}
+
+/* Checkbox แบบที่ 3 */
+.check-3 {
+  border-radius: 0;
+  border-color: #27ae60;
+}
+
+.check-3:checked {
+  background: #27ae60;
+}
+
+
+/* ================= RADIO ================= */
+
+/* ซ่อน Radio เดิม */
+.custom-radio {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* เมื่อเลือก Radio */
+.custom-radio:checked {
+  border: 6px solid #3498db;
+}
+
+/* Radio แบบที่ 2 */
+.radio-2 {
+  border-color: #e74c3c;
+}
+
+.radio-2:checked {
+  border-color: #e74c3c;
+}
+
+/* Radio แบบที่ 3 */
+.radio-3 {
+  border-color: #27ae60;
+}
+
+.radio-3:checked {
+  border-color: #27ae60;
+}
+
+
+/* ================= SHAPES ================= */
+
+/* Shape แบบที่ 1 วงกลม */
+.shape-1 {
+  width: 100px;
+  height: 100px;
+  background: #3498db;
+  border-radius: 50%;
+}
+
+/* Shape แบบที่ 2 สามเหลี่ยม */
+.shape-2 {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #e74c3c;
+}
+
+/* Shape แบบที่ 3 เพชร */
+.shape-3 {
+  width: 70px;
+  height: 70px;
+  background: #27ae60;
+  transform: rotate(45deg);
+  margin: 20px;
+}
+
+
+/* ================= PAGE DESIGN ================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.item {
+  display: inline-block;
+  margin: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>CSS Examples จาก CSS Scan</h1>
+
+
+<!-- ================= BUTTON ================= -->
+
+<div class="container">
+
+<h2>1. Button จำนวน 3 แบบ</h2>
+
+<div class="item">
+  <button class="button-6" role="button">
+    Button 6
+  </button>
+</div>
+
+<div class="item">
+  <button class="button-2">
+    Button 2
+  </button>
+</div>
+
+<div class="item">
+  <button class="button-3">
+    Button 3
+  </button>
+</div>
+
+</div>
+
+
+<!-- ================= BOX SHADOW ================= -->
+
+<div class="container">
+
+<h2>2. Box Shadow จำนวน 3 แบบ</h2>
+
+<div class="box shadow-1">
+  Shadow 1
+</div>
+
+<div class="box shadow-2">
+  Shadow 2
+</div>
+
+<div class="box shadow-3">
+  Shadow 3
+</div>
+
+</div>
+
+
+<!-- ================= CHECKBOX ================= -->
+
+<div class="container">
+
+<h2>3. Checkbox จำนวน 3 แบบ</h2>
+
+<div class="item">
+  <input type="checkbox"
+  class="custom-checkbox">
+  Checkbox 1
+</div>
+
+<div class="item">
+  <input type="checkbox"
+  class="custom-checkbox check-2">
+  Checkbox 2
+</div>
+
+<div class="item">
+  <input type="checkbox"
+  class="custom-checkbox check-3">
+  Checkbox 3
+</div>
+
+</div>
+
+
+<!-- ================= RADIO ================= -->
+
+<div class="container">
+
+<h2>4. Radio จำนวน 3 แบบ</h2>
+
+<div class="item">
+  <input type="radio"
+  name="radio"
+  class="custom-radio">
+  Radio 1
+</div>
+
+<div class="item">
+  <input type="radio"
+  name="radio"
+  class="custom-radio radio-2">
+  Radio 2
+</div>
+
+<div class="item">
+  <input type="radio"
+  name="radio"
+  class="custom-radio radio-3">
+  Radio 3
+</div>
+
+</div>
+
+
+<!-- ================= SHAPES ================= -->
+
+<div class="container">
+
+<h2>5. Shapes จำนวน 3 แบบ</h2>
+
+<div class="item">
+  <div class="shape-1"></div>
+  Circle
+</div>
+
+<div class="item">
+  <div class="shape-2"></div>
+  Triangle
+</div>
+
+<div class="item">
+  <div class="shape-3"></div>
+  Diamond
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.4 Media Query</title>
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  .bg {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  /* Desktop ขนาด 1281px ขึ้นไป */
+  @media (min-width: 1281px) {
+    .bg {
+      background: red;
+    }
+  }
+
+  /* Laptop ขนาด 1025px - 1280px */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .bg {
+      background: green;
+    }
+  }
+
+  /* Tablet แนวตั้ง */
+  @media (min-width: 768px) and
+  (max-width: 1024px) and
+  (orientation: portrait) {
+    .bg {
+      background: blue;
+    }
+  }
+
+  /* Tablet แนวนอน */
+  @media (min-width: 768px) and
+  (max-width: 1024px) and
+  (orientation: landscape) {
+    .bg {
+      background: purple;
+    }
+  }
+
+  /* จอขนาด 481px - 767px */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .bg {
+      background: yellow;
+    }
+
+    .text {
+      color: black;
+    }
+  }
+
+  /* โทรศัพท์มือถือ 320px - 480px */
+  @media (min-width: 320px) and (max-width: 480px) {
+    .bg {
+      background: pink;
+    }
+
+    .text {
+      color: black;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="bg">
+    <div class="text">Computer Technology</div>
+  </div>
+
+</body>
+</html>

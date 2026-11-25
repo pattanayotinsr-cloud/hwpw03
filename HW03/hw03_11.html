@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Student Information Form</title>
+
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    color: darkblue;
+  }
+
+  /* กำหนดรูปแบบ Form */
+  form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+  }
+
+  /* กำหนดกลุ่มข้อมูล */
+  fieldset {
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+
+  legend {
+    font-weight: bold;
+    color: blue;
+  }
+
+  /* กำหนดรูปแบบ Label */
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* กำหนดรูปแบบช่องกรอก */
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+
+  /* ปุ่มส่งข้อมูล */
+  button {
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* เปลี่ยนสีเมื่อเอาเมาส์ไปวาง */
+  button:hover {
+    background: darkblue;
+  }
+
+</style>
+</head>
+
+<body>
+
+<h2>ประวัตินักศึกษา</h2>
+
+<form id="studentForm">
+
+  <!-- ข้อมูลส่วนตัว -->
+  <fieldset>
+
+    <legend>ข้อมูลส่วนตัว</legend>
+
+    <label>รหัสนักศึกษา</label>
+    <input type="text"
+    name="student_id"
+    placeholder="กรอกรหัสนักศึกษา"
+    required>
+
+    <label>ชื่อ - นามสกุล</label>
+    <input type="text"
+    name="fullname"
+    placeholder="กรอกชื่อ-นามสกุล"
+    required>
+
+    <label>วันเดือนปีเกิด</label>
+    <input type="date" name="birthday">
+
+    <label>เพศ</label>
+    <select name="gender">
+      <option value="">-- เลือกเพศ --</option>
+      <option value="ชาย">ชาย</option>
+      <option value="หญิง">หญิง</option>
+    </select>
+
+    <label>เบอร์โทรศัพท์</label>
+    <input type="tel"
+    name="phone"
+    placeholder="กรอกเบอร์โทรศัพท์">
+
+    <label>Email</label>
+    <input type="email"
+    name="email"
+    placeholder="กรอก Email">
+
+  </fieldset>
+
+  <!-- ข้อมูลการศึกษา -->
+  <fieldset>
+
+    <legend>ข้อมูลการศึกษา</legend>
+
+    <label>คณะ</label>
+    <input type="text"
+    name="faculty"
+    placeholder="กรอกชื่อคณะ">
+
+    <label>สาขาวิชา</label>
+    <input type="text"
+    name="major"
+    placeholder="กรอกสาขาวิชา">
+
+    <label>ชั้นปี</label>
+    <select name="year">
+      <option value="">-- เลือกชั้นปี --</option>
+      <option value="1">ปี 1</option>
+      <option value="2">ปี 2</option>
+      <option value="3">ปี 3</option>
+      <option value="4">ปี 4</option>
+    </select>
+
+    <label>เกรดเฉลี่ย</label>
+    <input type="number"
+    name="gpa"
+    min="0"
+    max="4"
+    step="0.01">
+
+  </fieldset>
+
+  <!-- ข้อมูลเพิ่มเติม -->
+  <fieldset>
+
+    <legend>ข้อมูลเพิ่มเติม</legend>
+
+    <label>ที่อยู่</label>
+    <textarea name="address"
+    placeholder="กรอกที่อยู่"></textarea>
+
+    <label>งานอดิเรก</label>
+    <textarea name="hobby"
+    placeholder="กรอกงานอดิเรก"></textarea>
+
+  </fieldset>
+
+  <!-- ปุ่มส่งและล้างข้อมูล -->
+  <button type="submit">ส่งข้อมูล</button>
+
+  <button type="reset">ล้างข้อมูล</button>
+
+</form>
+
+<script>
+
+  // เลือก Form จาก id studentForm
+  const form = document.getElementById("studentForm");
+
+  // ตรวจจับเหตุการณ์เมื่อกดปุ่มส่งข้อมูล
+  form.addEventListener("submit", function(event) {
+
+    // ป้องกันไม่ให้หน้าเว็บ Reload
+    event.preventDefault();
+
+    // แสดงข้อความแจ้งเตือน
+    alert("ส่งข้อมูลนักศึกษาเรียบร้อยแล้ว");
+
+  });
+
+</script>
+
+</body>
+</html>

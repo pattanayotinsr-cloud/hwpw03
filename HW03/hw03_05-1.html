@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>1.5.1 Position Image</title>
+
+<style>
+  /* กรอบหลักสำหรับวางรูป */
+  .picture {
+    position: relative;
+    height: 400px;
+  }
+
+  /* กำหนดรูปภาพทั้งหมด */
+  .picture img {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px gray;
+  }
+
+  /* รูปภาพ A */
+  .a {
+    z-index: 3;
+    top: 100px;
+    left: 100px;
+  }
+
+  /* รูปภาพ B */
+  .b {
+    z-index: 1;
+    top: 250px;
+    left: 250px;
+  }
+
+  /* รูปภาพ C */
+  .c {
+    z-index: 2;
+    top: 300px;
+    left: 150px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="picture">
+
+  <img class="a"
+  src="https://picsum.photos/300/200?random=1"
+  alt="Picture A">
+
+  <img class="b"
+  src="https://picsum.photos/300/200?random=2"
+  alt="Picture B">
+
+  <img class="c"
+  src="https://picsum.photos/300/200?random=3"
+  alt="Picture C">
+
+</div>
+
+</body>
+</html>

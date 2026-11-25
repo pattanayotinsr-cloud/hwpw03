@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Testing CSS Loading</title>
+
+<style>
+
+  /* กำหนดรูปแบบวงกลม Loading */
+  .loader {
+    border: 16px solid #f3f3f3;
+
+    /* ทำให้ขอบเป็นวงกลม */
+    border-radius: 50%;
+
+    /* เปลี่ยนสีขอบด้านบน */
+    border-top: 16px solid blue;
+
+    /* กำหนดความกว้าง */
+    width: 120px;
+
+    /* กำหนดความสูง */
+    height: 120px;
+
+    /* เรียก Animation ชื่อ spin */
+    /* 2s = หมุน 2 วินาทีต่อรอบ */
+    /* linear = ความเร็วคงที่ */
+    /* infinite = หมุนตลอดเวลา */
+    animation: spin 2s linear infinite;
+  }
+
+  /* กำหนดการหมุนของวงกลม */
+  @keyframes spin {
+
+    /* จุดเริ่มต้น */
+    0% {
+      transform: rotate(0deg);
+    }
+
+    /* หมุนครบ 360 องศา */
+    100% {
+      transform: rotate(360deg);
+    }
+
+  }
+
+</style>
+</head>
+
+<body>
+
+<h2>Testing Loading CT</h2>
+
+<div class="loader"></div>
+
+</body>
+</html>

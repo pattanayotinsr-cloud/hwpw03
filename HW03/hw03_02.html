@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>HW03 - ข้อ 1.2</title>
+
+    <style>
+        .container {
+            width: 400px;
+            margin: 20px;  /*ระยะห่างด้านนอกกล่อง */
+            display: inline-block;
+            vertical-align: top;
+           text-align: center;	  /* จัดตำแหน่งข้อความ */
+        }
+
+        .header {
+            background-color: purple;
+            color: white;
+            padding: 10px;   /*ระยะห่างด้านในกล่อง */
+        }
+
+        .content {
+            background-color: cyan;/* 	กำหนดสีพื้นหลัง */
+            padding: 10px;
+            min-height: 80px;
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            gap: 5px;
+        }
+
+        .row .content {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- รูปแบบที่ 1: เรียงกล่องแนวตั้ง -->
+    <div class="container">
+        <div class="header">Hello CT</div>
+
+        <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio incidunt minima aliquid. Magni velit ea tempora deleniti doloribus vel quia quis fugiat, delectus veritatis excepturi error deserunt! At, perspiciatis odit?</div>
+        <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, esse ea voluptate vel, exercitationem nihil cumque, repellendus eligendi sint quasi sit dolorum tempore dolores tenetur recusandae. Culpa eveniet aperiam ipsa? 2</div>
+        <div class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique veritatis error est, neque adipisci omnis dolore. Eum dolores at facere, doloremque pariatur, esse quibusdam, explicabo exercitationem harum culpa ad nostrum.</div>
+    </div>
+
+    <!-- รูปแบบที่ 2: เรียงกล่องแนวนอน -->
+    <div class="container">
+        <div class="header">Hello CT</div>
+
+        <div class="row">
+            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quas hic consequatur saepe magni praesentium suscipit enim accusantium. Sapiente voluptatibus ut maxime unde accusamus a sit placeat, autem nemo eius!</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatem repellat ex impedit corrupti earum quas voluptate qui eius ipsa neque, magnam quisquam, error facere deserunt, est maiores fugiat laboriosam!</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sunt sed porro possimus rem amet aliquid molestias quas quo! Laudantium, dolore suscipit officia cumque ullam laboriosam unde vel nobis excepturi.</div>
+        </div>
+    </div>
+
+</body>
+</html>

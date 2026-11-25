@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>1.7 Graphic CSS</title>
+
+<!-- เรียกใช้ CSS จากเว็บไซต์ภายนอก -->
+<link rel="stylesheet"
+href="https://tinnakorn.cs.rmu.ac.th/courses/technologyweb/css/graphic.css">
+
+<style>
+  /* จัดเรียง div ให้เป็นตาราง */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    gap: 5px;
+  }
+
+  .container div {
+    width: 50px;
+    height: 50px;
+    background: lightblue;
+    border: 1px solid blue;
+    text-align: center;
+    line-height: 50px;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Graphic CSS จำนวน 100 div</h2>
+
+<div class="container" id="box"></div>
+
+<script>
+  // เลือก div ที่มี id ชื่อ box
+  const container = document.getElementById("box");
+
+  // วนลูปตั้งแต่ 1 ถึง 100
+  for (let i = 1; i <= 100; i++) {
+
+    // สร้าง div ใหม่
+    let div = document.createElement("div");
+
+    // ใส่ข้อความเป็นตัวเลข
+    div.innerHTML = i;
+
+    // เพิ่ม div เข้าไปใน container
+    container.appendChild(div);
+  }
+</script>
+
+</body>
+</html>
